@@ -1,0 +1,44 @@
+// Reset HtmlModule
+.HtmlModule {
+  color: $primaryTextColor;
+  color: var(--primaryTextColor);
+  font-size: rem(1);
+}
+
+// Normalize behavior when on sidebar
+// It should behave like other Modules on the sidebar
+.HtmlModule {
+  box-sizing: border-box;
+}
+
+.HtmlModule *:before,
+.HtmlModule *:after {
+  box-sizing: inherit;
+}
+
+@media (min-width: 768px) and (max-width: 1239px) {
+  aside .HtmlModule {
+    box-sizing: content-box;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+
+// Add Custom HtmlModule Styling
+
+.HtmlModule {
+  @import "reboot"; // reset/normalizer stylesheet
+  @import "base";   // set reasonable default tag styles
+  @import "icons";  // icon library
+
+  // Use Bulma's grid system
+  @import "bulma/bulma-grid";
+
+  // correct overlap-bug when column contents are too wide
+  .columns {
+    max-width: 100%;
+  }
+
+  @import "components"; // components
+  @import "utilities";  // helper classes
+}

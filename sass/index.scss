@@ -1,5 +1,18 @@
 @import "grove-variables";
 
-body {
-  font-family: $bodyFont;
+// Additional Variables
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace;
+
+// Grove CMS uses the 62.5% hack so 1rem = 10px
+// `rem()` puts it back in terms of rem units
+@function rem($value) {
+  @return $value * $body-2;
 }
+
+// Media Queries
+@mixin when-sidebar-not-collapsed {
+  @media (min-width: 768px) { @content; }
+}
+
+// Custom HtmlModule Styles
+@import "./HtmlModule/index.scss";

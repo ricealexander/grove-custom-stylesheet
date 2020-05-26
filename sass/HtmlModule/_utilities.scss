@@ -1,0 +1,324 @@
+.box {
+  // border-color(default)
+  border: 1px solid $secondaryColor3;
+  border: 1px solid var(--secondaryColor3);
+  // pad
+  padding: rem(1);
+}
+
+.text-muted {
+  font-family: $secondaryHeadlineFont;
+  font-family: var(--secondaryHeadlineFont);
+  font-size: $byline-1;
+  font-size: var(--byline-1);
+  color: $secondaryColor1;
+  color: var(--secondaryColor1);
+  line-height: 1.14;
+  font-weight: 400;
+}
+
+.text-align\(left\) {
+  text-align: left;
+}
+.text-align\(center\) {
+  text-align: center;
+}
+.text-align\(right\) {
+  text-align: right;
+}
+
+.flex-adjust\(none\) {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.flex-adjust\(shrink\) {
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+.flex-adjust\(grow\) {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+.flex-adjust\(auto\) {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.text-size\(reset\) {
+  font-size: rem(1);
+}
+
+.text-size\(\+1\) {
+  font-size: 1.125em; // $title-5
+}
+.text-size\(\+2\) {
+  font-size: 1.25em; // $title-4
+}
+.text-size\(\+3\) {
+  font-size: 1.375em; // $title-3
+}
+.text-size\(\+4\) {
+  font-size: 1.625em; // $title-2
+}
+.text-size\(\+5\) {
+  font-size: 1.875em; // $title-1
+}
+
+.text-size\(-1\) {
+  font-size: 0.875em;
+}
+.text-size\(-2\) {
+  font-size: 0.75em;
+}
+.text-size\(-3\) {
+  font-size: 0.625em;
+}
+.text-size\(-4\) {
+  font-size: 0.5em;
+}
+.text-size\(-5\) {
+  font-size: 0.375em;
+}
+
+.text-family\(headline\) {
+  font-family: $primaryHeadlineFont;
+  font-family: var(--primaryHeadlineFont);
+}
+.text-family\(headline2\) {
+  font-family: $secondaryHeadlineFont;
+  font-family: var(--secondaryHeadlineFont);
+}
+.text-family\(body\) {
+  font-family: $bodyFont;
+  font-family: var(--bodyFont);
+}
+
+.text-weight\(light\) {
+  font-weight: 100;
+}
+.text-weight\(regular\) {
+  font-weight: normal;
+}
+.text-weight\(bold\) {
+  font-weight: bold;
+}
+.text-weight\(black\) {
+  font-weight: 900;
+}
+
+
+// Rows
+// Row is a single layer flex-box with a justify-content.
+// It is used for simple layout tweaks to avoid the need for fancy columns
+.row, %row {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+.row\(start\) {
+  @extend %row;
+  justify-content: flex-start;
+}
+
+.row\(center\) {
+  @extend %row;
+  justify-content: center;
+}
+
+.row\(end\) {
+  @extend %row;
+  justify-content: flex-end;
+}
+
+.row\(space-around\) {
+  @extend %row;
+  justify-content: space-around;
+}
+
+.row\(space-between\) {
+  @extend %row;
+  justify-content: space-between;
+}
+
+.row\(space-evenly\) {
+  @extend %row;
+  justify-content: space-evenly;
+}
+
+
+// Ads occur at or above page titles.
+// If we customize the sidebar, we may want to push custom content closer to body content.
+// sidebar-spacer inserts space similar to an add, so that sidebar content aligns better.
+@include when-sidebar-not-collapsed {
+  .sidebar-spacer {
+    display: block;
+    opacity: 0;
+    height: 170px; // Ad height (250px) minus Ad top and bottom margins (40px each)
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+// Padding and margin utilities
+
+.pad {
+  padding: rem(1);
+}
+.pad\(y\) {
+  padding-top: rem(1);
+  padding-bottom: rem(1);
+}
+.pad\(x\) {
+  padding-right: rem(1);
+  padding-left: rem(1);
+}
+.pad\(top\) {
+  padding-top: rem(1);
+}
+.pad\(right\) {
+  padding-right: rem(1);
+}
+.pad\(bottom\) {
+  padding-bottom: rem(1);
+}
+.pad\(left\) {
+  padding-left: rem(1);
+}
+.pad\(0\) {
+  padding: 0;
+}
+
+.margin {
+  margin: rem(1);
+}
+.margin\(y\) {
+  margin-top: rem(1);
+  margin-bottom: rem(1);
+}
+.margin\(x\) {
+  margin-right: rem(1);
+  margin-left: rem(1);
+}
+.margin\(top\) {
+  margin-top: rem(1);
+}
+.margin\(right\) {
+  margin-right: rem(1);
+}
+.margin\(bottom\) {
+  margin-bottom: rem(1);
+}
+.margin\(left\) {
+  margin-left: rem(1);
+}
+.margin\(0\) {
+  margin: 0;
+}
+
+// Color Utilities
+
+.border-color\(default\) {
+  border: 1px solid $secondaryColor3;
+  border: 1px solid var(--secondaryColor3);
+}
+.border-color\(primary\) {
+  border: 1px solid $primaryColor2;
+  border: 1px solid var(--primaryColor2);
+}
+.border-color\(breaking\) {
+  border: 1px solid $breakingColor;
+  border: 1px solid var(--breakingColor);
+}
+.border-color\(info\) {
+  border: 1px solid $tagButtonBorderColor;
+  border: 1px solid var(--tagButtonBorderColor);
+}
+.border-color\(black\) {
+  border: 1px solid $primaryTextColor;
+  border: 1px solid var(--primaryTextColor);
+}
+.border-color\(white\) {
+  border: 1px solid $primaryTextColorInverse;
+  border: 1px solid var(--primaryTextColorInverse);
+}
+
+.fill-color\(default\) {
+  background-color: $secondaryColor3;
+  background-color: var(--secondaryColor3);
+}
+.fill-color\(primary\) {
+  background-color: $primaryColor2;
+  background-color: var(--primaryColor2);
+}
+.fill-color\(breaking\) {
+  background-color: $breakingColor;
+  background-color: var(--breakingColor);
+}
+.fill-color\(info\) {
+  background-color: $tagButtonBorderColor;
+  background-color: var(--tagButtonBorderColor);
+}
+.fill-color\(black\) {
+  background-color: $primaryTextColor;
+  background-color: var(--primaryTextColor);
+}
+.fill-color\(white\) {
+  background-color: $primaryTextColorInverse;
+  background-color: var(--primaryTextColorInverse);
+}
+
+.text-color\(default\) {
+  color: $secondaryColor3;
+  color: var(--secondaryColor3);
+}
+.text-color\(primary\) {
+  color: $primaryColor2;
+  color: var(--primaryColor2);
+}
+.text-color\(breaking\) {
+  color: $breakingColor;
+  color: var(--breakingColor);
+}
+.text-color\(info\) {
+  color: $tagButtonBorderColor;
+  color: var(--tagButtonBorderColor);
+}
+.text-color\(black\) {
+  color: $primaryTextColor;
+  color: var(--primaryTextColor);
+}
+.text-color\(white\) {
+  color: $primaryTextColorInverse;
+  color: var(--primaryTextColorInverse);
+}
+
+
+// Responsive Iframes
+.responsive-iframe {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  padding-top: 66.67%;  // 3:2
+  overflow: hidden;
+}
+
+.responsive-iframe iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.aspect-ratio\(2\:1\)  { padding-top: 50%;     }
+.aspect-ratio\(16\:9\) { padding-top: 56.25%;  }
+.aspect-ratio\(3\:2\)  { padding-top: 66.67%;  }
+.aspect-ratio\(4\:3\)  { padding-top: 75%;     }
+.aspect-ratio\(1\:1\)  { padding-top: 100%;    }
+.aspect-ratio\(3\:4\)  { padding-top: 133.33%; }
+.aspect-ratio\(2\:3\)  { padding-top: 150%;    }
+.aspect-ratio\(9\:16\) { padding-top: 177.78%; }
+.aspect-ratio\(1\:2\)  { padding-top: 200%;    }

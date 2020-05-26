@@ -1,0 +1,152 @@
+h1 {
+  color: $primaryTextColor;
+  color: var(--primaryTextColor);
+  font-family: $primaryHeadlineFont;
+  font-family: var(--primaryHeadlineFont);
+  font-size: $headline-1;
+  font-size: var(--headline-1);
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+h2 {
+  color: $primaryTextColor;
+  color: var(--primaryTextColor);
+  font-family: $secondaryHeadlineFont;
+  font-family: var(--secondaryHeadlineFont);
+  font-size: $title-1;
+  font-size: var(--title-1);
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+h3 {
+  color: $primaryTextColor;
+  color: var(--primaryTextColor);
+  font-family: $primaryHeadlineFont;
+  font-family: var(--primaryHeadlineFont);
+  font-size: $title-2;
+  font-size: var(--title-2);
+  font-weight: 700;
+  line-height: 1.16;
+  margin-bottom: rem(0.667);
+}
+
+h4 {
+  color: $primaryTextColor;
+  color: var(--primaryTextColor);
+  font-family: $secondaryHeadlineFont;
+  font-family: var(--secondaryHeadlineFont);
+  font-size: $title-3;
+  font-size: var(--title-3);
+  font-weight: 700;
+  line-height: 1.136;
+  text-transform: capitalize;
+}
+
+h5 {
+  color: $primaryTextColor;
+  color: var(--primaryTextColor);
+  font-family: $secondaryHeadlineFont;
+  font-family: var(--secondaryHeadlineFont);
+  font-size: $title-5;
+  font-size: var(--title-5);
+  font-weight: 700;
+  line-height: 1.22;
+  text-transform: uppercase;
+}
+
+h6 {
+  color: $secondaryColor1;
+  color: var(--secondaryColor1);
+  font-family: $secondaryHeadlineFont;
+  font-family: var(--secondaryHeadlineFont);
+  font-size: rem(1);
+  font-weight: 700;
+  line-height: normal;
+}
+
+img {
+  max-width: 100%;
+}
+
+p + p, p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+  margin-top: rem(1.5);
+}
+
+small {
+  font-family: $secondaryHeadlineFont;
+  font-family: var(--secondaryHeadlineFont);
+  font-size: $byline-1;
+  font-size: var(--byline-1);
+  color: $secondaryColor1;
+  color: var(--secondaryColor1);
+  line-height: 1.14;
+  font-weight: 400;
+}
+
+hr {
+  border: none;
+  background: $secondaryColor2;
+  background: var(--secondaryColor2);
+  margin: rem(1.5) auto;
+  height: 1px;
+  width: 100%;
+}
+
+code {
+  background-color: $primaryTextColorInverse;
+  background-color: var(--primaryTextColorInverse);
+  border: 1px solid $secondaryColor2;
+  border: 1px solid var(--secondaryColor2);
+  border-right-width: rem(0.25);
+  border-left-width: rem(0.25);
+  color: $primaryTextColor;
+  color: var(--primaryTextColor);
+  font-size: 0.8em;
+  padding: 0 rem(0.25);
+  white-space: nowrap;
+}
+
+pre {
+  background-color: $primaryTextColorInverse;
+  background-color: var(--primaryTextColorInverse);
+  border: 1px solid $secondaryColor2;
+  border: 1px solid var(--secondaryColor2);
+  border-left-width: rem(0.25);
+  color: $primaryTextColor;
+  color: var(--primaryTextColor);
+  margin: rem(2) 0;
+  padding: rem(1.5) rem(0.75);
+  position: relative;
+}
+
+pre > label:first-child {
+  background-color: $primaryTextColor;
+  background-color: var(--primaryTextColor);
+  color: white;
+  font-family: $bodyFont;
+  font-family: var(--bodyFont);
+  font-size: rem(0.8);
+  padding: rem(0.125) rem(1.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+h1 + pre, h2 + pre, h3 + pre, h4 + pre, h5 + pre, h6 + pre {
+  margin-top: rem(-0.5);
+}
+
+ul, ol {
+  font-family: $bodyFont;
+  font-family: var(--bodyFont);
+  font-size: rem(1.125);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-left: rem(1.25);
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  margin-left: rem(2.5);
+}
