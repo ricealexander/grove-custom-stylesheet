@@ -4,12 +4,12 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/riceam/grove-custom-stylesheet"
+    "url": "https://github.com/ricealexander/grove-custom-stylesheet"
   },
   "author": "St. Louis Public Radio - Digital Media",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/riceam/grove-custom-stylesheet/issues"
+    "url": "https://github.com/ricealexander/grove-custom-stylesheet/issues"
   },
   "scripts": {
     "build": "grunt",
