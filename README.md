@@ -6,6 +6,7 @@
 * [Getting Started](#getting-started)
 * [Generating the Stylesheet](#generating-the-stylesheet)
 * [Deploying With Netlify](#deploying-with-netlify)
+* [Adding Stylesheet to Grove CMS](#adding-stylesheet-to-grove-cms)
 * [Other Questions and Answers](#other-questions-and-answers)
 
 <br>
@@ -29,6 +30,17 @@ grove-custom-css/
 ├── package.json                   · project details, dependency list, scripts
 └── README.md                      · project description - YOU ARE HERE
 ```
+
+<br>
+
+### Dependencies
+Dependencies are found in `package.json`, under "devDependencies". A few notable ones:
+
+`grunt`: [Grunt](https://gruntjs.com/) is a task-runner. We use it to set up tasks we can run from our terminal.
+
+`sass`: [Sass](https://sass-lang.com/) is a css-preprocessor. It gives us advanced CSS capabilites and compiles to a simple CSS File.
+
+`postcss`: [PostCSS](https://postcss.org/) is used with other plugins to format our CSS file after Sass generates it.
 
 <br>
 
@@ -134,9 +146,56 @@ By this point you should have this project cloned and the dependencies installed
 
 The easiest approach is to [Sign Up](https://app.netlify.com/signup) with your GitHub account. Once signed up, you should be taken to your team page.
 
-Click "Create a new site", "GitHub" under Continous Deployment, and select your repo. (You will likely need to request permissions)
+1. Click **New site from Git** on the right side of the page.
 
-// More documentation here. Still need to set this up
+    ![New site from Git](./.github/netlify-new-site-from-git.png)
+
+2. Under **Continuous Deployment**, select your preferred Git host. In our case, that is **GitHub**.
+
+    ![Create new site](./.github/netlify-create-new-site.png)
+
+3. You will be prompted to find a repo. The first time you do this, you will need to get permissions from GitHub to connect to Netlify. Use the prompts to locate the repository.
+
+    ![Configure GitHub App](./.github/netlify-configure-github-app.png)
+
+4. Now you will need to enter your build settings. We want to deploy from our `master` branch. Under **Basic Build Settings**, set **Build command** to `npm run build` and **Publish directory** to `dist/`.
+
+    Now, anytime you push to the master branch, Netlify will run our build script and publish the dist directory to our website.
+
+    ![Basic Build Settings](./.github/netlify-basic-build-settings.png)
+
+5. Once this is done, Netlify creates a new URL for us. It will resemble
+<br>`https://adjective-noun-ab1234.netlify.app`
+
+    You can make sure it works by visiting your stylesheet at
+    <br>`https://adjective-noun-ab1234.netlify.app/custom-stylesheet.css`
+
+    You can manage your site from Netlify's overview dashboard, customize the name under Site settings > General > Site information > [Change site name], or [set up a custom domain](https://docs.netlify.com/domains-https/custom-domains/) under Domain settings.
+
+<br>
+
+### Adding Stylesheet to Grove CMS
+
+1. You must have Admin access in Grove. Navigate to Sites & Settings > Front-End and scroll to the very bottom
+
+2. Under **Custom Scripts And Styles**, click **Add Custom Head Elements**
+
+3. Fill our the Custom Head Elements Module:
+
+    _Custom Head Element_
+    <br>**Internal Name** `Custom Stylesheets`
+    <br>Leave **HTTP Methods**, **URL Pattern**, and **Content Types** blank.
+    <br>Under **Elements** click Add > Link Element
+
+    _Link Element_
+    <br>**Internal Name** `Grove Custom Stylesheet`
+    <br>**Attribute: "rel"** `stylesheet`
+    <br>**Attribute: "href"** `https://adjective-noun-ab1234.netlify.app/custom-stylesheet.css`
+    <br>Leave all other fields blank.
+
+    SAVE.
+
+Your custom stylesheet should now be applied to all pages on your site.
 
 <br>
 
@@ -144,3 +203,12 @@ Click "Create a new site", "GitHub" under Continous Deployment, and select your 
 
 **Question: How can I rename custom-stylesheet.css?**
 <br>Answer: The name of the stylesheet is controlled in `gruntfile.js` under sass > dist
+
+**Question: What is SASS and why are we using it?**
+<br>Answer: [SASS (Syntactically-Awesome Stylesheets)](https://sass-lang.com/) is a CSS pre-processor. We can create a project using an advanced syntax and it transforms into a regular CSS file.
+
+Some useful features SASS gives us include:
+
+* Variables, Functions, and Mixins for more powerful logic.
+* Scoped CSS Selectors.
+* Allows for a modular structure, with CSS housed in multiple files.
