@@ -9,7 +9,7 @@ module.exports = grunt => {
         implementation: require('node-sass'),
       },
       dist: {
-        files: { 'dist/index.css': 'sass/index.scss' },
+        files: { 'dist/custom-stylesheet.css': 'sass/index.scss' },
       },
     },
 
