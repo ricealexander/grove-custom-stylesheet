@@ -79,8 +79,8 @@ a.Button\(breaking\):hover {
 
 .Button\(info\) {
   @extend %Button;
-  background-color: $tagButtonBorderColor;
-  background-color: var(--tagButtonBorderColor);
+  background-color: $linkColor;
+  background-color: var(--linkColor);
   color: $primaryTextColorInverse;
   color: var(--primaryTextColorInverse);
 }
@@ -205,8 +205,8 @@ ol.List > li::before {
 }
 .Notice\(info\) {
   @extend %Notice;
-  background-color: $tagButtonBorderColor;
-  background-color: var(--tagButtonBorderColor);
+  background-color: $linkColor;
+  background-color: var(--linkColor);
   color: $primaryTextColorInverse;
   color: var(--primaryTextColorInverse);
 }
@@ -295,8 +295,8 @@ a.Pill\(breaking\):hover {
 
 .Pill\(info\) {
   @extend %Pill;
-  background-color: $tagButtonBorderColor;
-  background-color: var(--tagButtonBorderColor);
+  background-color: $linkColor;
+  background-color: var(--linkColor);
   color: $primaryTextColorInverse;
   color: var(--primaryTextColorInverse);
 }
@@ -411,14 +411,14 @@ a.Tag\(breaking\):hover {
 
 .Tag\(info\) {
   @extend %Tag;
-  border-color: $tagButtonBorderColor;
-  border-color: var(--tagButtonBorderColor);
-  color: $tagButtonBorderColor;
-  color: var(--tagButtonBorderColor);
+  border-color: $linkColor;
+  border-color: var(--linkColor);
+  color: $linkColor;
+  color: var(--linkColor);
 }
 a.Tag\(info\):hover {
-  color: $tagButtonBorderColor;
-  color: var(--tagButtonBorderColor);
+  color: $linkColor;
+  color: var(--linkColor);
 }
 
 .Tag\(black\) {
@@ -429,8 +429,8 @@ a.Tag\(info\):hover {
   color: var(--primaryTextColor);
 }
 a.Tag\(black\):hover {
-  border-color: $tagButtonBorderColor;
-  border-color: var(--tagButtonBorderColor);
+  border-color: $linkColor;
+  border-color: var(--linkColor);
   color: $primaryTextColor;
   color: var(--primaryTextColor);
 }

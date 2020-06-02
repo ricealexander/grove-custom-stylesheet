@@ -231,8 +231,8 @@
   border: 1px solid var(--breakingColor);
 }
 .border-color\(info\) {
-  border: 1px solid $tagButtonBorderColor;
-  border: 1px solid var(--tagButtonBorderColor);
+  border: 1px solid $linkColor;
+  border: 1px solid var(--linkColor);
 }
 .border-color\(black\) {
   border: 1px solid $primaryTextColor;
@@ -256,8 +256,8 @@
   background-color: var(--breakingColor);
 }
 .fill-color\(info\) {
-  background-color: $tagButtonBorderColor;
-  background-color: var(--tagButtonBorderColor);
+  background-color: $linkColor;
+  background-color: var(--linkColor);
 }
 .fill-color\(black\) {
   background-color: $primaryTextColor;
@@ -281,8 +281,8 @@
   color: var(--breakingColor);
 }
 .text-color\(info\) {
-  color: $tagButtonBorderColor;
-  color: var(--tagButtonBorderColor);
+  color: $linkColor;
+  color: var(--linkColor);
 }
 .text-color\(black\) {
   color: $primaryTextColor;
