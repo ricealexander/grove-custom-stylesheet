@@ -147,19 +147,6 @@
 }
 
 
-// Ads occur at or above page titles.
-// If we customize the sidebar, we may want to push custom content closer to body content.
-// sidebar-spacer inserts space similar to an add, so that sidebar content aligns better.
-@include when-sidebar-not-collapsed {
-  .sidebar-spacer {
-    display: block;
-    opacity: 0;
-    height: 170px; // Ad height (250px) minus Ad top and bottom margins (40px each)
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
 // Padding and margin utilities
 
 .pad {
