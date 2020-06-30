@@ -158,9 +158,9 @@ The easiest approach is to [Sign Up](https://app.netlify.com/signup) with your G
 
     ![Configure GitHub App](./.github/netlify-configure-github-app.png)
 
-4. Now you will need to enter your build settings. We want to deploy from our `master` branch. Under **Basic Build Settings**, set **Build command** to `npm run build` and **Publish directory** to `dist/`.
+4. Now you will need to enter your build settings. We want to deploy from our `main` branch. Under **Basic Build Settings**, set **Build command** to `npm run build` and **Publish directory** to `dist/`.
 
-    Now, anytime you push to the master branch, Netlify will run our build script and publish the dist directory to our website.
+    Now, anytime you push to the main branch, Netlify will run our build script and publish the dist directory to our website.
 
     ![Basic Build Settings](./.github/netlify-basic-build-settings.png)
 
